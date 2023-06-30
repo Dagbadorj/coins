@@ -7,6 +7,28 @@
 	},
 	"item": [
 		{
+			"name": "Get list of coins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.110:8080/coin",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"110"
+					],
+					"port": "8080",
+					"path": [
+						"coin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Add coin",
 			"request": {
 				"method": "POST",
@@ -26,7 +48,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Ethereum\",\r\n    \"origin\": \"USA\"\r\n}",
+					"raw": "{\r\n    \"name\": \"San Francisco\",\r\n    \"origin\": \"Canada\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,14 +56,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/addCoin",
+					"raw": "http://localhost:8080/coin",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"addCoin"
+						"coin"
 					],
 					"query": [
 						{
@@ -55,39 +77,20 @@
 			"response": []
 		},
 		{
-			"name": "get list of coins",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/coin",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"coin"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Get coin by id",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/getCoin/1",
+					"raw": "http://localhost:8080/coin/6",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"getCoin",
-						"1"
+						"coin",
+						"6"
 					]
 				}
 			},
@@ -100,7 +103,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Bitcoin\",\r\n    \"origin\": \"Silicon Valley\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Baldan\",\r\n    \"origin\": \"Mongolia\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -108,15 +111,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/updateCoin/1",
+					"raw": "http://localhost:8080/coin/5",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"updateCoin",
-						"1"
+						"coin",
+						"5"
 					]
 				}
 			},
@@ -125,18 +128,21 @@
 		{
 			"name": "Delete coin",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/delCoin/2",
+					"raw": "http://192.168.0.110:8080/coin/1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"192",
+						"168",
+						"0",
+						"110"
 					],
 					"port": "8080",
 					"path": [
-						"delCoin",
-						"2"
+						"coin",
+						"1"
 					]
 				}
 			},
